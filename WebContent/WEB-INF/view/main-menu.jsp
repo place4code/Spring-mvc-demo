@@ -9,7 +9,7 @@
 <body>
 
 JSP File
-<a href="showForm">showForm</a>
+<a href="hello/showForm">showForm</a>
 
 </body>
 </html>

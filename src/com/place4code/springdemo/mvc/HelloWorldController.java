@@ -1,12 +1,12 @@
 package com.place4code.springdemo.mvc;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello") //parent mapping
 public class HelloWorldController {
 
 	@RequestMapping("/showForm")
@@ -15,10 +15,8 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping("/processForm")
-	public String processForm(HttpServletRequest request, Model model) {
-		
-		//read the request from HTML form
-		String value = request.getParameter("studentName");
+	public String processForm(@RequestParam("studentName") String value, Model model) {
+		//					    ^^ parameter binding ^^
 		//to do
 		value = value.toUpperCase();
 		//add to the model
