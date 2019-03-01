@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student confirmation</title>
 </head>
 <body>
 
-JSP File
-<a href="hello/showForm">showForm</a>
+Student: ${student.firstName}, ${student.lastName}, ${student.country}, ${student.sex }<br>
 
-<a href="student/showForm">student form</a>
 
 
 </body>
